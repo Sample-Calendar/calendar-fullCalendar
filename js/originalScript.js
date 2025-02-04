@@ -14,89 +14,89 @@ document.addEventListener('DOMContentLoaded', function() {
       //events: events,
       events: [
         {
-          title: 'All Day Event',
+          title: 'Looking for a Companion',
           start: '2025-01-01',
-          person: '',
+          person: 'Ram',
           phone: '',
-          origin: '',
-          destination: ''
+          origin: 'MSP',
+          destination: 'HYD'
         },
         {
-          title: 'Long Event',
+          title: 'Help my mom',
           start: '2025-01-07',
           end: '2025-01-10',
-          person: '',
+          person: 'Laxman',
           phone: '',
-          origin: '',
-          destination: ''
+          origin: 'JFK',
+          destination: 'HYD'
         },
         {
           groupId: '999',
-          title: 'Repeating Event',
+          title: 'Help me',
           start: '2025-01-09T16:00:00',
-          person: '',
+          person: 'Bharath',
           phone: '',
-          origin: '',
-          destination: ''
+          origin: 'DLS',
+          destination: 'DLH'
         },
         {
           groupId: '999',
-          title: 'Repeating Event',
+          title: 'Travel Companion for Mom',
           start: '2025-01-16T16:00:00',
-          person: '',
+          person: 'Sita',
           phone: '',
-          origin: '',
-          destination: ''
+          origin: 'AST',
+          destination: 'TPT'
         },
         {
-          title: 'Conference',
+          title: 'Travel Companion for Mom',
           start: '2025-01-11',
           end: '2025-01-13',
-          person: '',
+          person: 'Urmila',
           phone: '',
-          origin: '',
-          destination: ''
+          origin: 'NWL',
+          destination: 'VZG'
         },
         {
-          title: 'Meeting',
+          title: 'Travel Companion for Mom',
           start: '2025-01-12T10:30:00',
           end: '2025-01-12T12:30:00',
-          person: '',
+          person: 'Karna',
           phone: '',
-          origin: '',
-          destination: ''
+          origin: 'PSU',
+          destination: 'HYD'
         },
         {
-          title: 'Lunch',
+          title: 'Travel Companion for Mom',
           start: '2025-01-12T12:00:00',
-          person: '',
+          person: 'Arjuna',
           phone: '',
-          origin: '',
-          destination: ''
+          origin: 'WSL',
+          destination: 'PUN'
         },
         {
-          title: 'Meeting',
+          title: 'Travel Companion for Mom',
           start: '2025-01-12T14:30:00',
-          person: '',
+          person: 'Bheema',
           phone: '',
-          origin: '',
-          destination: ''
+          origin: 'PST',
+          destination: 'DLH'
         },
         {
-          title: 'Birthday Party',
+          title: 'Travel Companion for Mom',
           start: '2025-01-13T07:00:00',
-          person: '',
+          person: 'Nakul',
           phone: '',
-          origin: '',
-          destination: ''
+          origin: 'CST',
+          destination: 'HYD'
         },
         {
-          title: 'Click for Google',
+          title: 'Travel Companion for Mom',
           start: '2025-01-28',
-          person: '',
+          person: 'Sahayam',
           phone: '',
-          origin: '',
-          destination: ''
+          origin: 'EST',
+          destination: 'BLR'
         }
       ],
       eventContent: function(arg) { 
@@ -112,4 +112,30 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     })
     calendar.render()
+
+
+    //Handlers and Helpers
+    // Filter by Origin
+  originFilter.addEventListener('change', function() {
+    let filteredEvents = events;
+    const selectedOrigin = this.value;
+
+    if (selectedOrigin) {
+      filteredEvents = events.filter(event => event.extendedProps.origin === selectedOrigin);
+    }
+
+    calendar.setOption('events', filteredEvents); 
+  });
+
+  // Filter by Destination
+  destinationFilter.addEventListener('change', function() {
+    let filteredEvents = events;
+    const selectedDestination = this.value;
+
+    if (selectedDestination) {
+      filteredEvents = events.filter(event => event.extendedProps.destination === selectedDestination);
+    }
+
+    calendar.setOption('events', filteredEvents); 
+  });
   })

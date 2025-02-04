@@ -3,11 +3,35 @@
 <head>
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar/main.min.css">
+  <style>
+    .filter-heading {
+      font-size: 18px; 
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <div>Some Filters are coming here</div>
+  <div class="filter-heading">Some Filters are coming here</div> 
+  <div>
+    <label for="origin-filter">Origin:</label>
+    <select id="origin-filter">
+      <option value="">All</option> 
+      <option value="New York">New York</option>
+      <option value="Los Angeles">Los Angeles</option>
+      <option value="London">London</option> 
+    </select>
+  </div>
+  <div>
+    <label for="destination-filter">Destination:</label>
+    <select id="destination-filter">
+      <option value="">All</option>
+      <option value="London">London</option>
+      <option value="Tokyo">Tokyo</option>
+      <option value="Paris">Paris</option> 
+    </select>
+  </div>
   <div id='calendar'></div>
   <script src="js/originalScript.js"></script> 
-  <!--<script type="module" src="js/eventData.js"></script>-->
 </body>
 </html>
