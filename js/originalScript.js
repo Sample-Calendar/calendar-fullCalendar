@@ -1,5 +1,5 @@
 // js/originalscript.js
-import {events } from '.eventData.js';
+import { events } from './eventData.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const calendarEl = document.getElementById('calendar')
@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
-      events: events,
-      /*events: [
+      //events: events,
+      events: [
         {
           title: 'All Day Event',
           start: '2025-01-01',
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
           origin: '',
           destination: ''
         }
-      ],*/
+      ],
       eventContent: function(arg) { 
         return { 
           html: `
