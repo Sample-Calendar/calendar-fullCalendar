@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
-      //events: events,
+      events: events,
       /*events: [
         {
           title: 'All Day Event',
