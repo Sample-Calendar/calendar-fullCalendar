@@ -136,6 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
       filteredEvents = events.filter(event => event.extendedProps.destination === selectedDestination);
     }
 
-    calendar.setOption('events', filteredEvents); 
+    calendar.setOption('events', filteredEvents);
   });
   })
