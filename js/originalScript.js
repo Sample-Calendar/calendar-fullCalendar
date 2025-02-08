@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Ram',
           phone: '',
           origin: 'MSP',
+          type: 'helper',
           destination: 'HYD'
         },
         {
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Laxman',
           phone: '',
           origin: 'JFK',
+          type: 'helper',
           destination: 'HYD'
         },
         {
@@ -37,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Bharath',
           phone: '',
           origin: 'DLS',
+          type: 'helper',
           destination: 'DLH'
         },
         {
@@ -46,15 +49,17 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Sita',
           phone: '',
           origin: 'AST',
+          type: 'helper',
           destination: 'TPT'
         },
         {
-          title: 'Travel Companion for Mom',
+          title: 'Will help anyone',
           start: '2025-01-11',
           end: '2025-01-13',
           person: 'Urmila',
           phone: '',
           origin: 'NWL',
+          type: 'helper',
           destination: 'VZG'
         },
         {
@@ -64,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Karna',
           phone: '',
           origin: 'PSU',
+          type: 'traveler',
           destination: 'HYD'
         },
         {
@@ -72,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Arjuna',
           phone: '',
           origin: 'WSL',
+          type: 'traveler',
           destination: 'PUN'
         },
         {
@@ -80,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Bheema',
           phone: '',
           origin: 'PST',
+          type: 'traveler',
           destination: 'DLH'
         },
         {
@@ -88,18 +96,24 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Nakul',
           phone: '',
           origin: 'CST',
+          type: 'traveler',
           destination: 'HYD'
         },
         {
-          title: 'Travel Companion for Mom',
+          title: 'Ready to help',
           start: '2025-01-28',
           person: 'Sahayam',
           phone: '',
           origin: 'EST',
+          type: 'helper',
           destination: 'BLR'
         }
       ],
-      eventContent: function(arg) { 
+      eventContent: function(arg) {
+        if (arg.event.extendedProps.type === 'helper') {
+          arg.event.setProp('backgroundColor', 'orange'); 
+          arg.event.setProp('borderColor', 'orange'); 
+        }
         return { 
           html: `
           ${arg.event.title} <br>
