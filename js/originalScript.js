@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
           Person: ${arg.event.extendedProps.person} <br>
           Phone: ${arg.event.extendedProps.phone} <br>
           Origin: ${arg.event.extendedProps.origin} <br>
+          Type: ${arg.event.extendedProps.type} <br>
           Destination: ${arg.event.extendedProps.destination}
         ` 
         };
