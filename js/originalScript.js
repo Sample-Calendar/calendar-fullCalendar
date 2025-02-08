@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Ram',
           phone: '',
           origin: 'MSP',
+          type: 'traveler',
           destination: 'HYD'
         },
         {
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Laxman',
           phone: '',
           origin: 'JFK',
+          type: 'traveler',
           destination: 'HYD'
         },
         {
@@ -37,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Bharath',
           phone: '',
           origin: 'DLS',
+          type: 'traveler',
           destination: 'DLH'
         },
         {
@@ -46,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Sita',
           phone: '',
           origin: 'AST',
+          type: 'traveler',
           destination: 'TPT'
         },
         {
@@ -55,15 +59,17 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Urmila',
           phone: '',
           origin: 'NWL',
+          type: 'traveler',
           destination: 'VZG'
         },
         {
-          title: 'Travel Companion for Mom',
+          title: 'Ready to Help',
           start: '2025-01-12T10:30:00',
           end: '2025-01-12T12:30:00',
           person: 'Karna',
           phone: '',
           origin: 'PSU',
+          type: 'helper',
           destination: 'HYD'
         },
         {
@@ -72,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Arjuna',
           phone: '',
           origin: 'WSL',
+          type: 'traveler',
           destination: 'PUN'
         },
         {
@@ -80,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Bheema',
           phone: '',
           origin: 'PST',
+          type: 'traveler',
           destination: 'DLH'
         },
         {
@@ -88,14 +96,16 @@ document.addEventListener('DOMContentLoaded', function() {
           person: 'Nakul',
           phone: '',
           origin: 'CST',
+          type: 'traveler',
           destination: 'HYD'
         },
         {
-          title: 'Travel Companion for Mom',
+          title: 'Willing to help',
           start: '2025-01-28',
           person: 'Sahayam',
           phone: '',
           origin: 'EST',
+          type: 'helper',
           destination: 'BLR'
         }
       ],
