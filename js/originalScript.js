@@ -109,16 +109,21 @@ document.addEventListener('DOMContentLoaded', function() {
           destination: 'BLR'
         }
       ],
+      eventColor: 'blue', // Default color for all events
       eventContent: function(arg) { 
+        if (arg.event.extendedProps.type === 'helper') {
+          arg.event.setProp('backgroundColor', 'orange'); 
+          arg.event.setProp('borderColor', 'orange'); 
+        }
         return { 
           html: `
-          ${arg.event.title} <br>
-          Person: ${arg.event.extendedProps.person} <br>
-          Phone: ${arg.event.extendedProps.phone} <br>
-          Origin: ${arg.event.extendedProps.origin} <br>
-          Type: ${arg.event.extendedProps.type} <br>
-          Destination: ${arg.event.extendedProps.destination}
-        ` 
+            ${arg.event.title} <br>
+            Person: ${arg.event.extendedProps.person} <br>
+            Phone: ${arg.event.extendedProps.phone} <br>
+            Origin: ${arg.event.extendedProps.origin} <br>
+            Type: ${arg.event.extendedProps.type} <br>
+            Destination: ${arg.event.extendedProps.destination}
+          ` 
         };
       }
     })
