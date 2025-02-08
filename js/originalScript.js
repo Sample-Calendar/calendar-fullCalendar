@@ -110,10 +110,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       ],
       eventContent: function(arg) {
-        if (arg.event.extendedProps.type === 'helper') {
+        /*if (arg.event.extendedProps.type === 'helper') {
           arg.event.setProp('backgroundColor', 'orange'); 
           arg.event.setProp('borderColor', 'orange'); 
-        }
+        }*/
         return { 
           html: `
           ${arg.event.title} <br>
