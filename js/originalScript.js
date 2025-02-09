@@ -1,5 +1,5 @@
 // js/originalscript.js
-//import { events } from './eventData.js';
+import { events2 } from './eventData.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const events = [
@@ -100,6 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
         destination: 'BLR'
       }
     ];
+    const importedEvents = events2;
+    console.log('Imported events '+importedEvents);
     const calendarEl = document.getElementById('calendar');
     const originFilter = document.getElementById('origin-filter'); 
     const destinationFilter = document.getElementById('destination-filter');
@@ -172,4 +174,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     calendar.setOption('events', filteredEvents);
   });
-})
+});
+
+export default calendar;
