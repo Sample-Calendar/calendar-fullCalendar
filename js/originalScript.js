@@ -1,5 +1,5 @@
 // js/originalscript.js
-import { events2 } from './eventData.js';
+import { events } from './eventData.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const events = [
