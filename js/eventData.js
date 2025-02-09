@@ -1,89 +1,100 @@
 // js/eventData.js
 
-export const events= [
+export const events=  [
   {
-    title: 'All Day Event',
+    title: 'Looking for a Companion',
     start: '2025-01-01',
-    person: '',
+    person: 'Ram',
     phone: '',
-    origin: '',
-    destination: ''
+    origin: 'MSP',
+    type: 'traveler',
+    destination: 'HYD'
   },
   {
-    title: 'Long Event',
+    title: 'Help my mom',
     start: '2025-01-07',
     end: '2025-01-10',
-    person: '',
+    person: 'Laxman',
     phone: '',
-    origin: '',
-    destination: ''
+    origin: 'JFK',
+    type: 'traveler',
+    destination: 'HYD'
   },
   {
     groupId: '999',
-    title: 'Repeating Event',
+    title: 'Help me',
     start: '2025-01-09T16:00:00',
-    person: '',
+    person: 'Bharath',
     phone: '',
-    origin: '',
-    destination: ''
+    origin: 'DLS',
+    type: 'traveler',
+    destination: 'DLH'
   },
   {
-    groupId: '999',
-    title: 'Repeating Event',
+    title: 'Travel Companion for Mom',
     start: '2025-01-16T16:00:00',
-    person: '',
+    end: '2025-01-16T18:00:00',
+    person: 'Sita',
     phone: '',
-    origin: '',
-    destination: ''
+    origin: 'AST',
+    type: 'traveler',
+    destination: 'TPT'
   },
   {
-    title: 'Conference',
-    start: '2025-01-11',
-    end: '2025-01-13',
-    person: '',
+    title: 'Travel Companion for Mom',
+    start: '2025-02-11',
+    end: '2025-02-13',
+    person: 'Urmila',
     phone: '',
-    origin: '',
-    destination: ''
+    origin: 'NWL',
+    type: 'traveler',
+    destination: 'VZG'
   },
   {
-    title: 'Meeting',
-    start: '2025-01-12T10:30:00',
-    end: '2025-01-12T12:30:00',
-    person: '',
+    title: 'Ready to Help',
+    start: '2025-01-12',
+    end: '2025-01-12',
+    person: 'Karna',
     phone: '',
-    origin: '',
-    destination: ''
+    origin: 'PSU',
+    type: 'helper',
+    destination: 'HYD'
   },
   {
-    title: 'Lunch',
-    start: '2025-01-12T12:00:00',
-    person: '',
+    title: 'Travel Companion for Mom',
+    start: '2025-01-12',
+    person: 'Arjuna',
     phone: '',
-    origin: '',
-    destination: ''
+    origin: 'WSL',
+    type: 'traveler',
+    destination: 'PUN'
   },
   {
-    title: 'Meeting',
+    title: 'Travel Companion for Mom',
     start: '2025-01-12T14:30:00',
-    person: '',
+    end: '2025-01-13T13:30:00',
+    person: 'Bheema',
     phone: '',
-    origin: '',
-    destination: ''
+    origin: 'PST',
+    type: 'traveler',
+    destination: 'DLH'
   },
   {
-    title: 'Birthday Party',
+    title: 'Travel Companion for Mom',
     start: '2025-01-13T07:00:00',
-    person: '',
+    person: 'Nakul',
     phone: '',
-    origin: '',
-    destination: ''
+    origin: 'CST',
+    type: 'traveler',
+    destination: 'HYD'
   },
   {
-    title: 'Click for Google',
+    title: 'Willing to help',
     start: '2025-01-28',
-    person: '',
+    person: 'Sahayam',
     phone: '',
-    origin: '',
-    destination: ''
+    origin: 'EST',
+    type: 'helper',
+    destination: 'BLR'
   }
 ];
