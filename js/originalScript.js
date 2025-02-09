@@ -2,7 +2,109 @@
 //import { events } from './eventData.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-    const calendarEl = document.getElementById('calendar')
+    const events = [
+      {
+        title: 'Looking for a Companion',
+        start: '2025-01-01',
+        person: 'Ram',
+        phone: '',
+        origin: 'MSP',
+        type: 'traveler',
+        destination: 'HYD'
+      },
+      {
+        title: 'Help my mom',
+        start: '2025-01-07',
+        end: '2025-01-10',
+        person: 'Laxman',
+        phone: '',
+        origin: 'JFK',
+        type: 'traveler',
+        destination: 'HYD'
+      },
+      {
+        groupId: '999',
+        title: 'Help me',
+        start: '2025-01-09T16:00:00',
+        person: 'Bharath',
+        phone: '',
+        origin: 'DLS',
+        type: 'traveler',
+        destination: 'DLH'
+      },
+      {
+        title: 'Travel Companion for Mom',
+        start: '2025-01-16T16:00:00',
+        end: '2025-01-16T18:00:00',
+        person: 'Sita',
+        phone: '',
+        origin: 'AST',
+        type: 'traveler',
+        destination: 'TPT'
+      },
+      {
+        title: 'Travel Companion for Mom',
+        start: '2025-02-11',
+        end: '2025-02-13',
+        person: 'Urmila',
+        phone: '',
+        origin: 'NWL',
+        type: 'traveler',
+        destination: 'VZG'
+      },
+      {
+        title: 'Ready to Help',
+        start: '2025-01-12',
+        end: '2025-01-12',
+        person: 'Karna',
+        phone: '',
+        origin: 'PSU',
+        type: 'helper',
+        destination: 'HYD'
+      },
+      {
+        title: 'Travel Companion for Mom',
+        start: '2025-01-12',
+        person: 'Arjuna',
+        phone: '',
+        origin: 'WSL',
+        type: 'traveler',
+        destination: 'PUN'
+      },
+      {
+        title: 'Travel Companion for Mom',
+        start: '2025-01-12T14:30:00',
+        end: '2025-01-13T13:30:00',
+        person: 'Bheema',
+        phone: '',
+        origin: 'PST',
+        type: 'traveler',
+        destination: 'DLH'
+      },
+      {
+        title: 'Travel Companion for Mom',
+        start: '2025-01-13T07:00:00',
+        person: 'Nakul',
+        phone: '',
+        origin: 'CST',
+        type: 'traveler',
+        destination: 'HYD'
+      },
+      {
+        title: 'Willing to help',
+        start: '2025-01-28',
+        person: 'Sahayam',
+        phone: '',
+        origin: 'EST',
+        type: 'helper',
+        destination: 'BLR'
+      }
+    ];
+    const calendarEl = document.getElementById('calendar');
+    const originFilter = document.getElementById('origin-filter'); 
+    const destinationFilter = document.getElementById('destination-filter');
+    const showHelpersCheckbox = document.getElementById('showHelpers'); 
+    
     const calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'dayGridMonth',
       initialDate: '2025-01-07',
@@ -11,106 +113,18 @@ document.addEventListener('DOMContentLoaded', function() {
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
-      //events: events,
-      events: [
-        {
-          title: 'Looking for a Companion',
-          start: '2025-01-01',
-          person: 'Ram',
-          phone: '',
-          origin: 'MSP',
-          type: 'traveler',
-          destination: 'HYD'
-        },
-        {
-          title: 'Help my mom',
-          start: '2025-01-07',
-          end: '2025-01-10',
-          person: 'Laxman',
-          phone: '',
-          origin: 'JFK',
-          type: 'traveler',
-          destination: 'HYD'
-        },
-        {
-          groupId: '999',
-          title: 'Help me',
-          start: '2025-01-09T16:00:00',
-          person: 'Bharath',
-          phone: '',
-          origin: 'DLS',
-          type: 'traveler',
-          destination: 'DLH'
-        },
-        {
-          groupId: '999',
-          title: 'Travel Companion for Mom',
-          start: '2025-01-16T16:00:00',
-          person: 'Sita',
-          phone: '',
-          origin: 'AST',
-          type: 'traveler',
-          destination: 'TPT'
-        },
-        {
-          title: 'Travel Companion for Mom',
-          start: '2025-01-11',
-          end: '2025-01-13',
-          person: 'Urmila',
-          phone: '',
-          origin: 'NWL',
-          type: 'traveler',
-          destination: 'VZG'
-        },
-        {
-          title: 'Ready to Help',
-          start: '2025-01-12T10:30:00',
-          end: '2025-01-12T12:30:00',
-          person: 'Karna',
-          phone: '',
-          origin: 'PSU',
-          type: 'helper',
-          destination: 'HYD'
-        },
-        {
-          title: 'Travel Companion for Mom',
-          start: '2025-01-12T12:00:00',
-          person: 'Arjuna',
-          phone: '',
-          origin: 'WSL',
-          type: 'traveler',
-          destination: 'PUN'
-        },
-        {
-          title: 'Travel Companion for Mom',
-          start: '2025-01-12T14:30:00',
-          person: 'Bheema',
-          phone: '',
-          origin: 'PST',
-          type: 'traveler',
-          destination: 'DLH'
-        },
-        {
-          title: 'Travel Companion for Mom',
-          start: '2025-01-13T07:00:00',
-          person: 'Nakul',
-          phone: '',
-          origin: 'CST',
-          type: 'traveler',
-          destination: 'HYD'
-        },
-        {
-          title: 'Willing to help',
-          start: '2025-01-28',
-          person: 'Sahayam',
-          phone: '',
-          origin: 'EST',
-          type: 'helper',
-          destination: 'BLR'
+      events: events,
+      eventOverlap: false,
+      eventDataTransform: function(event) {
+        if (event.type === 'helper') { 
+          event.backgroundColor = '#FFA500';
+          event.borderColor = '#FFA500';
+        } else {
+          event.backgroundColor = '#3788d8'; 
         }
-      ],
-      eventColor: 'lightblue', // Default color for all events
-      eventContent: function(arg) { 
+        return event;
+      },
+      eventContent: function(arg) {
         return { 
           html: `
             ${arg.event.title} <br>
@@ -122,8 +136,8 @@ document.addEventListener('DOMContentLoaded', function() {
           ` 
         };
       }
-    })
-    calendar.render()
+    });
+    calendar.render();
 
 
     //Handlers and Helpers
@@ -131,9 +145,8 @@ document.addEventListener('DOMContentLoaded', function() {
   originFilter.addEventListener('change', function() {
     let filteredEvents = events;
     const selectedOrigin = this.value;
-
     if (selectedOrigin) {
-      filteredEvents = events.filter(event => event.extendedProps.origin === selectedOrigin);
+      filteredEvents = events.filter(event => event.origin === selectedOrigin);
     }
 
     calendar.setOption('events', filteredEvents); 
@@ -145,9 +158,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectedDestination = this.value;
 
     if (selectedDestination) {
-      filteredEvents = events.filter(event => event.extendedProps.destination === selectedDestination);
+      filteredEvents = events.filter(event => event.destination === selectedDestination);
     }
 
     calendar.setOption('events', filteredEvents);
   });
-  })
+  showHelpersCheckbox.addEventListener('change', function() {
+    let filteredEvents = events;
+
+    if (this.checked) {
+      filteredEvents = events.filter(event => event.type === 'helper');
+    }
+
+    calendar.setOption('events', filteredEvents);
+  });
+})

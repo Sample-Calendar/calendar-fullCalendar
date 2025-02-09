@@ -3,34 +3,46 @@
 <head>
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar/main.min.css">
-  <style>
-    .filter-heading {
-      font-size: 18px; 
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="filter-heading">Some Filters are coming here</div> 
-  <div>
-    <label for="origin-filter">Origin:</label>
-    <select id="origin-filter">
-      <option value="">All</option> 
-      <option value="New York">New York</option>
-      <option value="Los Angeles">Los Angeles</option>
-      <option value="London">London</option> 
-    </select>
+  <div class="header-bar">
+    <div class="header-title">Travel Companion Calendar</div> 
+    <div class="options-container"> 
+      <div>
+        <label for="showHelpers">Show Only Helpers:</label>
+        <div class="toggle-container">
+          <input type="checkbox" id="showHelpers" />
+          <label class="toggle" for="showHelpers"></label>
+        </div>
+      </div>
+      <div class="filter-container"> 
+        <div>
+          <label for="origin-filter">Origin:</label>
+          <select id="origin-filter">
+            <option value="">All</option>
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="London">London</option> 
+          </select>
+        </div>
+        <div>
+          <label for="destination-filter">Destination:</label>
+          <select id="destination-filter">
+            <option value="">All</option>
+            <option value="London">London</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Paris">Paris</option> 
+          </select>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <label for="destination-filter">Destination:</label>
-    <select id="destination-filter">
-      <option value="">All</option>
-      <option value="London">London</option>
-      <option value="Tokyo">Tokyo</option>
-      <option value="Paris">Paris</option> 
-    </select>
+
+  <div class="scroll-sticker">
+    <p>Important Note: This is a sample application. For actual travel assistance, please contact relevant authorities.</p>
   </div>
+
   <div id='calendar'></div>
   <script src="js/originalScript.js"></script> 
 </body>
