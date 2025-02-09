@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
           destination: 'BLR'
         }
       ],
-      eventColor: 'blue', // Default color for all events
+      eventColor: 'lightblue', // Default color for all events
       eventContent: function(arg) { 
         return { 
           html: `
