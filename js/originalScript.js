@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         destination: 'BLR'
       }
     ];
-    const importedEvents = events2;
+    const importedEvents = events;
     console.log('Imported events '+importedEvents);
     const calendarEl = document.getElementById('calendar');
     const originFilter = document.getElementById('origin-filter'); 
