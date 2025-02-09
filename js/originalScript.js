@@ -111,10 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
       ],
       eventColor: 'blue', // Default color for all events
       eventContent: function(arg) { 
-        /*if (arg.event.extendedProps.type === 'helper') {
-          arg.event.setProp('backgroundColor', 'orange'); 
-          arg.event.setProp('borderColor', 'orange'); 
-        }*/
         return { 
           html: `
             ${arg.event.title} <br>
