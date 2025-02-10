@@ -1,15 +1,3 @@
-export const ports = [
-  {
-    name: 'origin',
-    label: 'Origin',
-    options: [...portOptions]
-  },
-  {
-    name: 'destination',
-    label: 'Destination',
-    options: [...portOptions]
-  }
-];
 export const portOptions = [
   { value: 'Any', label: 'All' },
   { value: 'NYK', label: 'New York' },
@@ -33,4 +21,16 @@ export const portOptions = [
   { value: 'CST', label: 'Chicago' },
   { value: 'EST', label: 'Edenberg' },
   { value: 'BLR', label: 'Bangalore' }
+];
+export const ports = [
+  {
+    name: 'origin',
+    label: 'Origin',
+    options: [...portOptions]
+  },
+  {
+    name: 'destination',
+    label: 'Destination',
+    options: [...portOptions]
+  }
 ];
