@@ -2,6 +2,8 @@
 <html>
 <head>
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+  <script type="module" src="js/originalScript.js"></script>
+  <!--<script src="js/originalScript.js"></script>-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar/main.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -20,30 +22,32 @@
         <div>
           <label for="origin-filter">Origin:</label>
           <select id="origin-filter">
-            <option value="">All</option>
+            <!--<option value="">All</option>
             <option value="New York">New York</option>
             <option value="Los Angeles">Los Angeles</option>
-            <option value="London">London</option> 
+            <option value="London">London</option> -->
           </select>
         </div>
         <div>
           <label for="destination-filter">Destination:</label>
           <select id="destination-filter">
-            <option value="">All</option>
+            <!--<option value="">All</option>
             <option value="London">London</option>
             <option value="Tokyo">Tokyo</option>
-            <option value="Paris">Paris</option> 
+            <option value="Paris">Paris</option> -->
           </select>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="scroll-sticker">
-    <p>Important Note: This is a sample application. For actual travel assistance, please contact relevant authorities.</p>
+  <div class="scrolling-sticker">
+    <div class="scrolling-text">
+      ℹ️ Kindly note that event information is submitted anonymously.
+      ℹ️ Facilitators cannot guarantee the privacy of participants or confirm the accuracy of all details. 
+      ℹ️ We encourage you to proceed with caution when contacting individuals listed in these events.
+    </div>
   </div>
 
   <div id='calendar'></div>
-  <script type="module" src="js/originalScript.js"></script>
 </body>
 </html>

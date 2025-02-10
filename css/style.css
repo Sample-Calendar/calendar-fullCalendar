@@ -51,7 +51,7 @@ input[type="checkbox"]:checked + .toggle::before {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 .options-container {
   display: flex;
@@ -86,11 +86,30 @@ input[type="checkbox"] {
 }
 
 /* Scrolling Sticker (Optional) */
-.scroll-sticker {
-  background-color: #f0f0f0;
+.scrolling-sticker {
+  background-color: gold;
+  overflow: hidden;
+  color: darkblue;
+  font-weight: bold;
+  white-space: wrap;
+}
+.scrolling-text {
+  animation: scroll-left 50s linear infinite; /* Define animation */
   padding: 5px 10px;
-  margin-top: 10px;
   border-radius: 5px;
-  overflow-x: auto;
   white-space: nowrap;
+  width: 100%; 
+  height: auto; /* Adjust height as needed */
+  z-index: 999; /* Ensure it stays on top */
+}
+/*
+
+*/
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%); 
+  }
+  to {
+    transform: translateX(-100%); 
+  }
 }
