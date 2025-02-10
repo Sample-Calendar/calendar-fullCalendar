@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         destination: 'BLR'
       }
     ];*/
-    const events = events;
+   // const events = events;
     const calendarEl = document.getElementById('calendar');
     const originFilter = document.getElementById('origin-filter'); 
     const destinationFilter = document.getElementById('destination-filter');
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function populateSelectOptions() {
-  filters.forEach(filter => {
+  ports.forEach(filter => {
     const selectElement = document.getElementById(`${filter.name}-filter`);
     filter.options.forEach(option => {
       const optionElement = document.createElement('option');
